@@ -1,0 +1,51 @@
+1. select count('USA') 
+   from city; Answer 4079
+
+2.  select LifeExpectancy, Population 
+    from country where LocalName='Argentina';
+
+3. select LocalName, Continent, LifeExpectancy
+   from country 
+   where LifeExpectancy and LocalName is not null 
+   order by LifeExpectancy desc 
+   Limit 1;
+
+4.select a.`Name`
+  from city a
+  join country b on a.ID=b.Capital
+  where b.`Name`='Spain';
+
+5.select distinct b.`Language`
+  from country a
+  join countrylanguage b on a.`Code`=b.CountryCode 
+  where a.Region='Southeast Asia';
+
+6.select `Name`
+  from country 
+  Where `Name` Like '%F'
+  Limit 25;
+
+7.select count(a.`Name`)
+  from country a
+  join city  b on a.`Code`=b.CountryCode
+  where a.`Name`='China'
+
+8.select LocalName, Continent, Population
+   from country 
+   where Population and LocalName is not null 
+   order by LifeExpectancy asc
+   Limit 1;
+
+9.select count(`Name`)
+   from country 
+
+10.select `Name`, SurfaceArea
+  from country
+  order by SurfaceArea desc
+  limit 10
+
+11.select `Name` , Population
+  from city
+  where CountryCode='JPN' order by Population desc
+  Limit 5
+
