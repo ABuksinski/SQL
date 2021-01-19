@@ -49,3 +49,14 @@
   where CountryCode='JPN' order by Population desc
   Limit 5
 
+12.select `Code`, `Name`, HeadOfState
+  from country
+  where HeadOfState='Elisabeth II'
+
+14.select distinct `Language` 
+from countrylanguage
+
+15.select `Name` , GNP
+  from country
+  order by GNP desc
+  Limit 10
